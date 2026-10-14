@@ -18,4 +18,11 @@ jobs:
       - name: sudo install php -y
         run: sudo apt install php
       - name: php version 
-        run: php --version 
+        run: php --version
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
