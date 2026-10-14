@@ -1,0 +1,21 @@
+name: install php on ubuntu 22 and ubuntu 24
+on: workflow_dispatch
+jobs:
+  job1:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: update apt repo
+        run: sudo apt update
+      - name: install php
+        run: sudo apt install php -y
+      - name: php version
+        run: php --version
+  job2:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: update apt repo
+        run: sudo apt update
+      - name: sudo install php -y
+        run: sudo apt install php
+      - name: php version 
+        run: php --version 
